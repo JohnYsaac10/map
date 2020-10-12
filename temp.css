@@ -1,0 +1,348 @@
+.navigation {}
+
+.navigation__checkbox {
+    display: none;
+}
+
+.navigation__button {
+    background-color: white;
+    height: 4.5rem;
+    width: 4.5rem;
+    position: fixed;
+    top: 6.2rem;
+    right: 6.2rem;
+    border-radius: 50%;
+    z-index: 7;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navigation__background {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient(#ca1b2c, #a81423);
+    z-index: 5;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    /* transform: scale(80); */
+}
+
+.navigation__nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 6;
+    /* display: none; */
+    opacity: 0;
+    width: 0;
+    transition: all, .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.navigation__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+}
+
+.navigation__item {
+    margin: 1rem;
+}
+
+.navigation__link:link, .navigation__link:visited {
+    display: inline-block;
+    font-size: 3rem;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+    background-size: 220%;
+    transition: all .4s;
+    padding: 1rem, 2rem;
+}
+
+.navigation__link:hover, .navigation__link:active {
+    background-position: 100%;
+    color: #ca1b2c;
+    transform: translateX(1rem);
+}
+
+.navigation__checkbox:checked~.navigation__background {
+    transform: scale(80);
+}
+
+.navigation__checkbox:checked~.navigation__nav {
+    opacity: 1;
+    width: 100%;
+}
+
+.navigation__icon {
+    position: relative;
+    margin-top: 2.25rem;
+}
+
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 2.5rem;
+    height: 2px;
+    background-color: black;
+    display: inline-block;
+}
+
+.navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+}
+
+.navigation__icon::before {
+    top: -0.5rem;
+}
+
+.navigation__icon::after {
+    top: 0.5rem;
+}
+
+.navigation__button:hover .navigation__icon::after {
+    top: 0.7rem;
+}
+
+.navigation__button:hover .navigation__icon::before {
+    top: -0.7rem;
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon {
+    background-color: transparent;
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+}
+
+
+
+
+/*tooltip css*/
+body {
+    background-color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: salmon;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+}
+
+.btn-pluss {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 22px;
+    width: 30px;
+    margin: 0 auto;
+    background-color: white;
+    transition: width .3s .5s ease, border-radius 1.1s ease;
+}
+
+.btn-pluss a {
+    display: block;
+    position: relative;
+    color: #FA434B;
+    text-decoration: none;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn-pluss a:hover {
+    text-decoration: inherit;
+    color: white;
+    background-color: #FA434B;
+    transition: background-color .5s ease;
+}
+
+.btn-pluss:after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    line-height: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: #FA434B;
+    color: white;
+    transform: translateY(-50%) translateX(-50%);
+    transition: all .3s .5s ease;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.btn-pluss ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+    opacity: 0;
+    width: 100%;
+    margin-left: 0px;
+    transition: all .5s ease;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.btn-pluss ul li {
+    background-color: #e4e4e4;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: height 1s ease;
+}
+
+.tooltip2 {
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+    width: 70px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    animation-duration: 3s;
+    animation-name: jump;
+    animation-iteration-count: infinite;
+    background-color: #fff;
+    color: #FA434B;
+    transition: all 1s ease;
+    pointer-events: none;
+}
+
+.tooltip2::after {
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    display: block;
+    height: 10px;
+    width: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: inherit;
+}
+
+.tooltip2::before {
+    content: '';
+    color: white;
+}
+
+.btn-pluss-wrapper:hover .btn-pluss {
+    width: 150px;
+    border-radius: 15px;
+    padding-bottom: 5px;
+    transition: width .3s ease, border-radius .3s ease, padding-bottom .3s ease;
+}
+
+.btn-pluss-wrapper:hover .btn-pluss::after {
+    transition: all .3s ease;
+    left: 50%;
+    top: 10px;
+    transform: translateY(-5px) translateX(-50%);
+}
+
+.btn-pluss-wrapper:hover .btn-pluss ul {
+    opacity: 1;
+    margin-top: 30px;
+    transition: all 1s ease;
+}
+
+.btn-pluss-wrapper:hover .btn-pluss li {
+    height: 25px;
+    transition: height 1s ease;
+}
+
+.btn-pluss-wrapper:hover .btn-pluss li:hover {
+    border-bottom: 1px solid darken(#e9e5e5, 10);
+}
+
+.btn-pluss-wrapper:hover .tooltip2 {
+    animation-duration: 0s;
+    transition: all 1s ease;
+    color: white;
+    width: 90px;
+}
+
+.btn-pluss-wrapper:hover .tooltip2::before {
+    content: 'Encuentra!';
+    display: block;
+    color: #FA434B;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    transition: all 1s .3s ease;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(3px)
+    }
+    50% {
+        transform: translateY(-15px)
+    }
+    100% {
+        transform: translateY(3px)
+    }
+}
+
+
+
+/*
+<div class="navigation"> <!---->
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;
+        </span></label> <!--fixed, white, z-i(3)-->
+        <div class="navigation__background">&nbsp;</div> <!--fixed, color radial-gradient, z-i(1)-->
+
+        <div class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link">hola</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">a todos</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">tengan</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">un buen dia</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">y un buen finde</a></li>
+            </ul> <!--absolute-->
+        </div> <!--fixed, z-i(2)-->
+    </div>
+*/

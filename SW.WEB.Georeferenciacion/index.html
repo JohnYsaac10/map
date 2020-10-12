@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Facilito | Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="public/css/spinners.css" />
+
+    <style type="text/css">
+
+        body, html {
+            height: 100%;
+            overflow: hidden;
+            font-size: 16px;
+            background: silver;
+            /*font-family: Arial, sans-serif;*/
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        div {
+            height: 100%;
+        }
+
+        #parent {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .center {
+            display: inline-block;
+            vertical-align: middle;
+            padding-top: 5%;
+        }
+
+
+        .button {
+            border-radius: 4px;
+            background-color: #ad0f15;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 16px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+                .button span:after {
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+                .button:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+    </style>
+</head>
+
+<body>
+
+    <div id="parent">
+        <div class="center">
+            <div id="divInfo">
+                <div class="lds-ripple">
+                    <div></div>
+                    <div></div>
+                </div>
+                <p>Procesando Georeferenciación</p>
+                <p>Por favor espere un momento</p>
+            </div>
+            <div id="divReset">
+                <button id="btnReset" class="button"><span>VOLVER A ABRIR</span></button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/redirect.js?1"></script>
+</body>
+</html>

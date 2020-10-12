@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Folder>
+<NetworkLink>
+<LookAt id="geoserver">  <longitude>-83.59794616699216</longitude>      <!-- kml:angle180 -->  <latitude>-1.6852766700381778</latitude>        <!-- kml:angle90 -->  <altitude>0</altitude>       <!-- double -->   <range>2003223.1586463884</range>              <!-- double -->  <tilt>0</tilt>               <!-- float -->  <heading>0</heading>         <!-- float -->  <altitudeMode>clampToGround</altitudeMode>   <!--kml:altitudeModeEnum:clampToGround, relativeToGround, absolute --></LookAt><name>igm:provincias</name>
+<open>1</open>
+<visibility>1</visibility>
+<Url>
+<href><![CDATA[http://www.geoportaligm.gob.ec:80/nacional//wms?service=WMS&request=GetMap&format=application/vnd.google-earth.kmz+XML&width=1024&height=1024&srs=EPSG:4326&layers=igm:provincias&styles=provincias&KMScore=50&KMAttr=true&legend=false]]></href>
+<viewRefreshMode>onStop</viewRefreshMode>
+<viewRefreshTime>1</viewRefreshTime>
+</Url>
+</NetworkLink>
+<LookAt id="geoserver">  <longitude>-83.59794616699216</longitude>      <!-- kml:angle180 -->  <latitude>-1.6852766700381778</latitude>        <!-- kml:angle90 -->  <altitude>0</altitude>       <!-- double -->   <range>2003223.1586463884</range>              <!-- double -->  <tilt>0</tilt>               <!-- float -->  <heading>0</heading>         <!-- float -->  <altitudeMode>clampToGround</altitudeMode>   <!--kml:altitudeModeEnum:clampToGround, relativeToGround, absolute --></LookAt></Folder>
+</kml>

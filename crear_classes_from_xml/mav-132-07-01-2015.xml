@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recaudacionVehiculos>
+   <cabecera>
+      <codigoBanco>132</codigoBanco>
+      <nombreBanco>COOPERATIVA DE AHORRO Y CREDITO GUARANDA LTDA.</nombreBanco>
+      <fechaRecaudacion>07-01-2015</fechaRecaudacion>
+      <numeroTransaccionesDirectasMATRICULA>19</numeroTransaccionesDirectasMATRICULA>
+      <numeroTransaccionesReversadasMATRICULA>0</numeroTransaccionesReversadasMATRICULA>
+      <numeroTransaccionesTotalesMATRICULA>19</numeroTransaccionesTotalesMATRICULA>
+      <montoTransaccionesDirectasMATRICULA>1646.56</montoTransaccionesDirectasMATRICULA>
+      <montoTransaccionesReversasMATRICULA>0</montoTransaccionesReversasMATRICULA>
+      <montoTotalTransaccionesMATRICULA>1646.56</montoTotalTransaccionesMATRICULA>
+      <numeroTransaccionesDirectasTRANSF_DOM>3</numeroTransaccionesDirectasTRANSF_DOM>
+      <numeroTransaccionesReversadasTRANSF_DOM>0</numeroTransaccionesReversadasTRANSF_DOM>
+      <numeroTransaccionesTotalesTRANSF_DOM>3</numeroTransaccionesTotalesTRANSF_DOM>
+      <montoTransaccionesDirectasTRANSF_DOM>164.65</montoTransaccionesDirectasTRANSF_DOM>
+      <montoTransaccionesReversasTRANSF_DOM>0</montoTransaccionesReversasTRANSF_DOM>
+      <montoTotalTransaccionesTRANSF_DOM>164.65</montoTotalTransaccionesTRANSF_DOM>
+   </cabecera>
+   <detallesPagos>
+      <detallePago tipoPago="MATRICULA">
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542637679" codTranIFI="1522829" codValRec="21907812" placaCpnCamv="ABC1482" valorDebitar="90.35" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542643868" codTranIFI="1523785" codValRec="21908366" placaCpnCamv="G01451122" valorDebitar="66.16" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542675988" codTranIFI="1526466" codValRec="21911137" placaCpnCamv="HL340V" valorDebitar="31.6" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542690286" codTranIFI="1527749" codValRec="21912357" placaCpnCamv="LBN0661" valorDebitar="350.2" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542648135" codTranIFI="1524277" codValRec="21908786" placaCpnCamv="ABK0107" valorDebitar="47" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542676149" codTranIFI="1526483" codValRec="21911151" placaCpnCamv="HR380A" valorDebitar="32.4" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542682589" codTranIFI="1527109" codValRec="21911683" placaCpnCamv="HQ011L" valorDebitar="35.05" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542625313" codTranIFI="1521003" codValRec="21906664" placaCpnCamv="PKW0562" valorDebitar="122.82" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542625427" codTranIFI="1521018" codValRec="21906679" placaCpnCamv="PBQ3618" valorDebitar="225.44" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542626623" codTranIFI="1521113" codValRec="21906781" placaCpnCamv="HC091O" valorDebitar="31.34" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542654379" codTranIFI="1524817" codValRec="21909214" placaCpnCamv="PBN2088" valorDebitar="63.09" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542655980" codTranIFI="1524976" codValRec="21909352" placaCpnCamv="PBB1742" valorDebitar="55.9" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542673754" codTranIFI="1526320" codValRec="21910936" placaCpnCamv="TCM0461" valorDebitar="58.55" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542681712" codTranIFI="1527039" codValRec="21911607" placaCpnCamv="TCP0193" valorDebitar="150.5" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542654807" codTranIFI="1524854" codValRec="21909254" placaCpnCamv="PSG0264" valorDebitar="92.06" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542665529" codTranIFI="1525762" codValRec="21910251" placaCpnCamv="G01533800" valorDebitar="56.95" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542665598" codTranIFI="1525771" codValRec="21910257" placaCpnCamv="PR0010789" valorDebitar="56.12" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542665720" codTranIFI="1525777" codValRec="21910268" placaCpnCamv="G01504127" valorDebitar="46" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542676310" codTranIFI="1526491" codValRec="21911165" placaCpnCamv="HZ792K" valorDebitar="35.03" fechaPago="07-01-2015" estadoDebito="SI" />
+      </detallePago>
+      <detallePago tipoPago="TRANSF_DOM">
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542637835" codTranIFI="1522842" codValRec="21907826" placaCpnCamv="ABC1482" valorDebitar="24.69" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542625600" codTranIFI="1521035" codValRec="21906690" placaCpnCamv="PBQ3618" valorDebitar="119.96" fechaPago="07-01-2015" estadoDebito="SI" />
+         <pago codTranIFIRev="" tipoTx="TX_DIRECTA" codLogMon="1320701201542656030" codTranIFI="1524985" codValRec="21909356" placaCpnCamv="PBB1742" valorDebitar="20" fechaPago="07-01-2015" estadoDebito="SI" />
+      </detallePago>
+   </detallesPagos>
+</recaudacionVehiculos>

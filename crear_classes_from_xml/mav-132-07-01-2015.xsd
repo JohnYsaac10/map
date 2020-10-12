@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="recaudacionVehiculos" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="recaudacionVehiculos" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cabecera">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigoBanco" type="xs:string" minOccurs="0" />
+              <xs:element name="nombreBanco" type="xs:string" minOccurs="0" />
+              <xs:element name="fechaRecaudacion" type="xs:string" minOccurs="0" />
+              <xs:element name="numeroTransaccionesDirectasMATRICULA" type="xs:string" minOccurs="0" />
+              <xs:element name="numeroTransaccionesReversadasMATRICULA" type="xs:string" minOccurs="0" />
+              <xs:element name="numeroTransaccionesTotalesMATRICULA" type="xs:string" minOccurs="0" />
+              <xs:element name="montoTransaccionesDirectasMATRICULA" type="xs:string" minOccurs="0" />
+              <xs:element name="montoTransaccionesReversasMATRICULA" type="xs:string" minOccurs="0" />
+              <xs:element name="montoTotalTransaccionesMATRICULA" type="xs:string" minOccurs="0" />
+              <xs:element name="numeroTransaccionesDirectasTRANSF_DOM" type="xs:string" minOccurs="0" />
+              <xs:element name="numeroTransaccionesReversadasTRANSF_DOM" type="xs:string" minOccurs="0" />
+              <xs:element name="numeroTransaccionesTotalesTRANSF_DOM" type="xs:string" minOccurs="0" />
+              <xs:element name="montoTransaccionesDirectasTRANSF_DOM" type="xs:string" minOccurs="0" />
+              <xs:element name="montoTransaccionesReversasTRANSF_DOM" type="xs:string" minOccurs="0" />
+              <xs:element name="montoTotalTransaccionesTRANSF_DOM" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="detallesPagos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="detallePago" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="pago" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="codTranIFIRev" type="xs:string" />
+                        <xs:attribute name="tipoTx" type="xs:string" />
+                        <xs:attribute name="codLogMon" type="xs:string" />
+                        <xs:attribute name="codTranIFI" type="xs:string" />
+                        <xs:attribute name="codValRec" type="xs:string" />
+                        <xs:attribute name="placaCpnCamv" type="xs:string" />
+                        <xs:attribute name="valorDebitar" type="xs:string" />
+                        <xs:attribute name="fechaPago" type="xs:string" />
+                        <xs:attribute name="estadoDebito" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="tipoPago" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
