@@ -1,0 +1,96 @@
+﻿punto de partida: (-2.207105, -79.899641) venezuela y esmeraldas
+
+
+(-2.212251, -79.898468) el oro y garcia moreno x
+(-2.206719, -79.902118) tunguragua y venezuela x
+(-2.216025, -79.905253) francisco segura y tungurahua x
+(-2.215639, -79.890523) el oro y noguchi
+(-2.204146, -79.887434) gomez rendon y nogochi
+(-2.203331, -79.884774) chile y cuenca
+(-2.195012, -79.884902) boyaca y 10 de agosto
+(-2.191453, -79.897442) clemente bayen y tungurahua
+(-2.196985, -79.899119) huancavilca y tungurahua
+(-2.191109, -79.884046) boyaca y 9 de octubre
+(-2.190766, -79.896371) carchi y aguirre abad
+(-2.195955, -79.914021) cuenca y milagro
+(-2.229340, -79.898444) mall del sur
+(-2.205711, -79.904905) venezuela y guerrero valenzuela x
+
+(-2.206955, -79.899044) esmeraldas, entre portete y venezuela x
+
+
+/**hjfdhjhdfhjdfhjdfjjdjdfjfd*/
+
+
+create procedure sp_getAgencyByLatAndLng
+--@maxLat varchar(20),
+--@minLat varchar(20),
+--@maxLon varchar(20),
+--@minLon varchar(20)
+AS
+BEGIN
+
+
+
+------------i9iiikljk
+declare @R int = 6371
+declare @lat float = -0.03852124918722945
+declare @lon float = -1.3945118066114548
+declare @maxLat float = -2.1981117839408126
+declare @maxLon float = -79.89064110731931
+declare @minLat float = -2.216098216059187
+declare @minLon float = -79.9086408926807
+declare @rad float = 1.3
+--mllnlkmlk--ñll------
+/*Select Id, sucursal,direccion , lat, lng
+           From geolocalizacion
+           Where lat Between @minLat And @maxLat
+           And lng Between @minLon And @maxLon*/
+Select id, lat, lng, sucursal, direccion, --Id, Postcode, Lat, Lon,
+acos( sin(@lat) * sin( radians(lat) ) + cos(@lat) * cos( radians(lat) ) * cos( radians(lng) - @lon ) ) * @R As D
+From (
+           Select Id, sucursal,direccion , lat, lng
+           From geolocalizacion
+           Where lat Between @minLat And @maxLat
+           And lng Between @minLon And @maxLon
+         ) As FirstCut
+Where acos( sin(@lat) * sin( radians(lat) ) + cos(@lat) * cos( radians(lat) )*cos( radians(lng) - @lon ) ) * @R < @rad
+Order by D
+
+END
+
+
+
+
+/*jdfjkjkjsdjk----------------------------------------------*/
+
+
+
+create table geolocalizacion( id int primary key not null, lat float(6), lng float(6), sucursal varchar(80), direccion varchar (200) )
+
+drop table geolocalizacion
+
+
+select * from geolocalizacion
+
+insert into geolocalizacion (id, lat, lng, sucursal, direccion) values
+(1, -2.212251,-79.898468, 'sucursal 1', 'el oro y garcia moreno'),
+(2, -2.206719,-79.902118, 'sucursal 2', 'tunguragua y venezuela'),
+(3, -2.216025,-79.905253, 'sucursal 3', 'francisco segura y tungurahua'),
+(4, -2.215639,-79.890523, 'sucursal 4', 'el oro y noguchi'),
+(5, -2.204146,-79.887434, 'sucursal 5', 'gomez rendon y nogochi'),
+(6, -2.203331,-79.884774, 'sucursal 6', 'chile y cuenca'),
+(7, -2.195012,-79.884902, 'sucursal 7', 'boyaca y 10 de agosto'),
+(8, -2.191453,-79.897442, 'sucursal 8', 'clemente bayen y tungurahua'),
+(9, -2.196985,-79.899119, 'sucursal 9', 'huancavilca y tungurahua'),
+(10, -2.191109,-79.884046, 'sucursal 10', 'boyaca y 9 de octubre'),
+(11, -2.190766,-79.896371, 'sucursal 11', 'carchi y aguirre abad'),
+(12, -2.195955,-79.914021, 'sucursal 12', 'cuenca y milagro'),
+(13, -2.229340,-79.898444, 'sucursal 13', 'mall del sur')
+
+
+insert into geolocalizacion (id, lat, lng, sucursal, direccion) values
+(14, -2.205711, -79.904905, 'sucursal 14', 'venezuela y guerrero valenzuela')
+
+insert into geolocalizacion (id, lat, lng, sucursal, direccion) values
+(15, -2.206955, -79.899044, 'sucursal 15', 'esmeraldas, entre portete y venezuela')

@@ -126,6 +126,8 @@
     <Content Include="public\js\redirect.js" />
     <Content Include="index.html" />
     <Content Include="test.html" />
+    <Content Include="utils\calculate.js" />
+    <Content Include="utils\tablas.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
