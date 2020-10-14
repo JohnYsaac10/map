@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./slidemenu_1.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+</head>
+<body>
+    <div class="slide-menu">
+        <div class="slide-title">
+          <div>Selecciona tu Agencia</div>
+          <div class="icon"><i class="fas fa-angle-down"></i></div>
+        </div>
+        <div class="slide-nav">
+
+          <select class="selectpicker s1" data-live-search="true" data-width="45%">
+            <option data-tokens="ketchup mustard">- PROVINCIA -</option>
+            <option data-tokens="mustard">Burger, Shake and a Smile</option>
+            <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+          </select>
+          
+          <select class="selectpicker s2" data-live-search="true" data-width="45%">
+            <option data-tokens="ketchup mustard">- CIUDAD -</option>
+            <option data-tokens="mustard">Burger, Shake and a Smile Burger, Shake and a Smile</option>
+            <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+          </select>
+
+          <select class="selectpicker s3" data-live-search="true" data-width="45%">
+            <option data-tokens="ketchup mustard">- SECTOR -</option>
+            <option data-tokens="mustard">Burger, Shake and a Smile</option>
+            <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+          </select>
+
+          <select class="selectpicker s4" data-live-search="true" data-width="45%">
+            <option data-tokens="ketchup mustard">- AGENCIA -</option>
+            <option data-tokens="mustard">Burger, Shake and a Smile</option>
+            <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+          </select>
+
+          <button id="btnUbicarme" type="button" class="btn btn-warning" title="UBICARME">
+				    <i class="fas fa-location-arrow"></i>
+			    </button>
+			    <button id="btnRestart" type="button" class="btn btn-success" title="REINICIAR">
+				    <i class="fa fa-undo"></i>
+			    </button>
+          
+        </div>
+    </div>
+    
+    <div class="intro">
+      Hover over the menu.<br> Thanks for visiting.
+      <select class="selectpicker" data-live-search="true">
+        <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+        <option data-tokens="mustard">Burger, Shake and a Smile</option>
+        <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+      </select>
+    </div>
+    
+    <script>
+      $('s1').attr("data-width","20%");
+      $('s2').attr("data-width","20%");
+      $('s3').attr("data-width","20%");
+      $('s4').attr("data-width","20%");
+      console.log($("#btnUbicarme"))
+    </script>
+</body>
+</html>
